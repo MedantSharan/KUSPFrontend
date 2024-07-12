@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile - Skills & Aspirations - KUSP</title>
+    <link rel="stylesheet" href="edit-profile-skills-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="kusplogo.png">
+                </div>
+                <div class="nav-links">
+                    <a href="#">Discovery</a>
+                    <a href="#">My Jobs</a>
+                    <a href="#">Creatives</a>
+                </div>
+                <div class="profile">
+                    <img src="profile-icon.jpg" alt="Profile" class="profile-icon">
+                    <span>Fauzan Ardiansyah</span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="title-container">
+                <h1>Edit Your Profile</h1>
+                <span>Complete the steps below and make sure the profile data you enter is correct</span>
+            </div>
+            <div class="main-container">
+                <div class="progressbar">
+                    <div class="edit-steps">
+                        <div class="step completed">
+                            <span class="step-number">1</span>
+                            <span class="step-name">Personal Details</span>
+                        </div>
+                        <div class="vertical-line-active"></div>
+                        <div class="step active">
+                            <span class="step-number">2</span>
+                            <span class="step-name">Skills & Aspirations</span>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-name">Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h2>Professional Details</h2>
+                    <form id="editProfileSkillsForm">
+                        <div class="formGroup">
+                            <div class="formLabels">
+                                <label for="primaryRole">Primary Role</label>
+                            </div>
+                            <select id="primaryRole" name="primaryRole">
+                                <option value="">Select Primary Role</option>
+                                <!-- Add role options here -->
+                            </select>
+                        </div>
+                        
+                        <div class="formGroup">
+                            <div class="formLabels">
+                                <label for="uploadCV">Upload CV</label>
+                            </div>
+                            <div class="upload-area" id="upload-cv-area">Upload CV</div>
+                            <input type="file" id="uploadCV" name="uploadCV" style="display:none;">
+                        </div>
+                        
+                        <div class="formGroup">
+                            <div class="formLabels">
+                                <label for="about">About</label>
+                                <label class="subtext">Write about yourself</label>
+                            </div>
+                            <textarea id="about" name="about" rows="4" placeholder="Write your about..."></textarea>
+                        </div>
+                        
+                        <div class="formSwitch">
+                            <div class="formLabels">
+                                <label class="switch">
+                                    <input type="checkbox" id="availableForWork">
+                                    <span class="slider round"></span>
+                                </label>
+                                <span class="switch-label">Available for work</span>
+                            </div>
+                        </div>
+                        
+                        <h2>Skills</h2>
+                        <p class="skills-description">These tags will be used to best match you with job opportunities featured on The Gateway</p>
+                        
+                        <div class="formGroup">
+                            <div class="formLabels">
+                                <label>Notable Skills</label>
+                            </div>
+                            <div class="search-tags-container">
+                                <div class="search-input">
+                                    
+                                    <input type="text" placeholder="Search tags">
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Investor <span class="remove">×</span></span>
+                                    <span class="tag">Design <span class="remove">×</span></span>
+                                    <span class="tag">Strategy <span class="remove">×</span></span>
+                                    <span class="tag">User Research <span class="remove">×</span></span>
+                                    <span class="tag">Agile <span class="remove">×</span></span>
+                                    <span class="tag">Front End <span class="remove">×</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formGroup">
+                            <div class="formLabels">
+                                <label>Aspirations</label>
+                            </div>
+                            <div class="search-tags-container">
+                                <div class="search-input">
+                                    <input type="text" placeholder="Search tags">
+                                    
+                                </div>
+                                <div class="tags">
+                                    <span class="tag">Product <span class="remove">×</span></span>
+                                    <span class="tag">Design <span class="remove">×</span></span>
+                                    <span class="tag">Strategy <span class="remove">×</span></span>
+                                    <span class="tag">Marketing <span class="remove">×</span></span>
+                                    <span class="tag">Sales <span class="remove">×</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="formActions">
+                            <button type="button" class="btn-back">Back</button>
+                            <button type="submit" class="btn-next">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadCVArea = document.getElementById('upload-cv-area');
+            const uploadCVInput = document.getElementById('uploadCV');
+            
+            uploadCVArea.addEventListener('click', function() {
+                uploadCVInput.click();
+            });
+        });
+    </script>
+</body>
+<script src="edit-profile-skills-script.js"></script>
+</html>

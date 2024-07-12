@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile - KUSP</title>
+    <link rel="stylesheet" href="edit-profile-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="kusplogo.png">
+                </div>
+                <div class="nav-links">
+                    <a href="#">Discovery</a>
+                    <a href="#">My Jobs</a>
+                    <a href="#">Creatives</a>
+                </div>
+                <div class="profile">
+                    <img src="profile.jpg" alt="Profile" class="profile-icon">
+                    <span>Fauzan Ardiansyah</span>
+                </div>
+            </nav>
+        </header>
+
+        <main >
+            <div class="title-container">
+                <h1>Edit Your Profile</h1>
+                <span>Complete the details below and make sure the data you gave is correct.</span>
+            </div>
+            <div class="main-container">
+            <aside class="progressbar">
+                <div class="step active">
+                    <span class="step-number">1</span>
+                    <span class="step-name">Personal Details</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <span class="step-name">Skills & Aspirations</span>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <span class="step-name">Portfolio</span>
+                </div>
+            </aside>
+            
+
+            <section class="edit-profile-content">
+
+                <form id="profileForm">
+                    <div id="jobsContainer">
+                        <div class="jobSection">
+                            <h2>Personal Details</h2>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="firstName">First Name & Last Name</label>
+                                    <label class="subtext">Enter your first and last name</label>
+                                </div>
+                                <div class="nameInputs">
+                                    <input type="text" id="firstName" placeholder="Enter your First Name">
+                                    <input type="text" id="lastName" placeholder="Enter your Last Name">
+                                </div>
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="dob">Date of Birth</label>
+                                    <label class="subtext">Enter your date of birth</label>
+                                </div>
+                                <input type="date" id="dob">
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="ethnicity">Ethnicity & Pronouns</label>
+                                    <label class="subtext">Enter your ethnicity and pronouns</label>
+                                </div>
+                                <div class="ethnicityInputs">
+                                    <input type="text" id="ethnicity" placeholder="Enter your Ethnicity">
+                                    <input type="text" id="pronouns" placeholder="Enter your Pronouns">
+                                </div>
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="gender">Gender</label>
+                                    <label class="subtext">Select your gender</label>
+                                </div>
+                                <select id="gender">
+                                    <option value="">Select your Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                
+                        <div class="jobSection">
+                            <h2>Contact Details</h2>
+                            <p>These details will be displayed on your profile and be visible to potential employers</p>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="email">Email</label>
+                                    <label class="subtext">Enter your email</label>
+                                </div>
+                                <input type="email" id="email" placeholder="Enter your Email">
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="phone">Phone Number</label>
+                                    <label class="subtext">Enter your phone number</label>
+                                </div>
+                                <input type="tel" id="phone" placeholder="Enter your Phone Number">
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="location">Location</label>
+                                    <label class="subtext">Select your location</label>
+                                </div>
+                                <select id="location">
+                                    <option value="">Select Location</option>
+                                    <!-- Add location options here -->
+                                </select>
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="website">Website</label>
+                                    <label class="subtext">Enter your website URL</label>
+                                </div>
+                                <input type="url" id="website" placeholder="Enter your Website">
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="youtube">Link YouTube</label>
+                                    <label class="subtext">Enter your YouTube channel URL</label>
+                                </div>
+                                <input type="url" id="youtube" placeholder="https://youtube.com/user/name">
+                            </div>
+                            <div class="formGroup">
+                                <div class="formLabels">
+                                    <label for="instagram">Link Instagram</label>
+                                    <label class="subtext">Enter your Instagram profile URL</label>
+                                </div>
+                                <input type="url" id="instagram" placeholder="https://instagram.com/user/name">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formActions"><button type="submit" class="btn-next">Next</button></div>
+                    
+                </form>
+                
+            </section>
+        </div>
+        </main>
+    </div>
+
+    <script src="edit-profile-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-bottom: 1px solid rgb(235, 234, 234);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 100px; /* Adjust size as needed */
+    display: inline-block; /* Ensures the div is only as wide as its content */
+}
+
+.logo img {
+    width: 100%; /* Ensures the image fits within the div */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.nav-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #bfbcbc;
+    
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+main {
+    max-width: 100%;
+    max-height: 100%;
+    background-color: white;
+
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.title-container {
+    padding: 10px;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+span{
+    font-weight: bold;
+    color: #a5a2a2;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2rem;
+}
+
+.main-container {
+    display: flex;
+    gap: 4rem;
+}
+
+.progressbar {
+    flex: 0 0 250px;
+    background-color: #fff;
+    padding: 20px;
+    gap: 1rem;
+    margin-left: 2rem;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-line-active {
+    border-radius: 30%;
+    width: 6px;
+    min-height: 75px;
+    background: #00A86B;
+  }
+
+.vertical-line {
+    border-radius: 30%;
+    width: 6px;
+    min-height: 75px;
+    background: rgb(213, 211, 211)
+}
+
+.edit-steps {
+    gap:1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    font-size: 12px;
+    color: #666;
+}
+
+.step.active .step-number {
+    background-color: #FFC107;
+    color: white;
+}
+
+.step.completed .step-number {
+    background-color: #00A86B;
+    color: white;
+}
+
+.step-name {
+    font-size: 14px;
+    color: #666;
+}
+
+.step.active .step-name, .step.completed .step-name {
+    color: #333;
+    font-weight: bold;
+}
+
+.form-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 18px;
+    color: green;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.jobSection h2{
+    color: green;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    align-items: center;  /* Ensure alignment */
+}
+
+.formGroup label {
+    width: 200px;  
+    margin-right: 1rem; 
+    text-align: left;  
+    font-weight: bold;
+}
+
+.formGroup input, .formGroup select, .formGroup textarea {
+    flex: 1;  /* Make input take the remaining available space */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.subtext{
+    font-weight: lighter;
+    color:#afadad;
+}
+
+label {
+    padding-right: 100px;
+    color: black;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: calc(100% - 210px);  /* Adjust to fit within the formGroup */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.upload-area {
+    width: calc(100% - 210px);  /* Adjust to fit within the formGroup */
+    height: 200px;
+    border: 2px dashed #474747;
+    padding: 2rem;
+    text-align: center;
+    color: #666666;
+    cursor: pointer;
+    background-color: #e5e6cf;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 10px;  /* Adjusted width */
+    height: 20px;  /* Adjusted height */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;  /* Adjusted height */
+    width: 14px;  /* Adjusted width */
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #00A86B;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);  /* Adjusted translation */
+}
+
+.slider.round {
+    width: 50px;
+    border-radius: 20px;  /* Adjusted border-radius */
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.jobButton{
+    background-color: white;
+    color: green;
+    padding: 0.75rem 1.5rem;
+    margin-left: 87%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.switch-label {
+    margin-left: 10px;
+    vertical-align: middle;  /* Adjust alignment */
+}
+
+.search-tags-container {
+    width:70%;
+}
+
+.search-input {
+    position: relative;
+    width: 100%;  
+    margin-bottom: 10px;
+}
+
+.search-input input {
+    width: 100%;  /* Make the input take full width */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tags {
+    width: 50%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #212020;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.tag .remove {
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.formActions {
+    display: flex;
+    align-items: right;
+    justify-content:flex-end ;
+    padding-top: 10px;
+    margin-top: 3rem;
+}
+
+.btn-back, .btn-next {
+    padding: 0.75rem;
+    width:200px;
+    margin-left: 5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-next{
+    background-color: #00A86B;
+    color: white;
+}
+
+.btn-back {
+    background-color: #f0f0f0;
+    color: #333;
+}

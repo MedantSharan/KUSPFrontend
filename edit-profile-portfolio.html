@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your Profile</title>
+    <link rel="stylesheet" href="edit-profile-portfolio-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="kusplogo.png">
+                </div>
+                <div class="nav-links">
+                    <a href="#">Discovery</a>
+                    <a href="#">My Jobs</a>
+                    <a href="#">Creatives</a>
+                </div>
+                <div class="profile">
+                    <img src="profile-icon.jpg" alt="Profile" class="profile-icon">
+                    <span>Fauzan Ardiansyah</span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="title-container">
+                <h1>Edit Your Profile</h1>
+                <span>Complete the details below and make sure the data you gave is correct.</span>
+            </div>
+            <div class="main-container">
+                <div class="progressbar">
+                    <div class="edit-steps">
+                        <div class="step completed">
+                            <span class="step-number">1</span>
+                            <span class="step-name">Personal Details</span>
+                        </div>
+                        <div class="vertical-line-active"></div>
+                        <div class="step completed">
+                            <span class="step-number">2</span>
+                            <span class="step-name">Skills & Aspirations</span>
+                        </div>
+                        <div class="vertical-line-active"></div>
+                        <div class="step active">
+                            <span class="step-number">3</span>
+                            <span class="step-name">Portfolio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h2>Add previous job role, descriptions and/or pictures (max 6)</h2>
+                    <form id="profileForm">
+                        <div id="jobsContainer">
+                            <div class="jobSection">
+                                <h2>Job 1</h2>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="role">Role</label>
+                                    <label class="subtext">The title of your role</label>
+                                    </div>
+                                    <input type="text" id="role" name="role" placeholder="Enter your Role">
+                                </div>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="roleDescription">Role Description</label>
+                                    <label class="subtext">Please share information of what was required of you in this role</label>
+                                    </div>
+                                    <input type="text" id="roleDescription" name="roleDescription" placeholder="Enter the role description">
+                                </div>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="review">Review</label>
+                                    <label class="subtext">Share the employer's remarks on your work</label>
+                                    </div>
+                                    <input type="text" id="review" name="review" placeholder="Enter the review">
+                                    
+                                </div>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="reviewRole">Review Role</label>
+                                    <label class="subtext">Please share your full role name</label>
+                                    </div>
+                                    <input type="text" id="reviewRole" name="reviewRole" placeholder="Enter your Review Role">
+                                </div>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="reviewerCompanyName">Reviewer Company Name</label>
+                                    <label class="subtext">Please share your full company name</label>
+                                </div>
+                                    <input type="text" id="reviewerCompanyName" name="reviewerCompanyName" placeholder="Enter your Reviewer Company Name">
+                                </div>
+                                <div class="formGroup">
+                                    <div class="formLabels">
+                                    <label for="photo">Attach Photo</label>
+                                    <label class="subtext">Attach project images, pictures or files</label>
+                                    </div>
+                                    <div class="upload-area" id="existing-upload-area" name="photo"> Upload Images </div>
+                                    <input type="file" id="existing-file-input" name="photo" style="display:none;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="jobButton" id="addJobBtn">+ Add job</button>
+                        <div class="formActions">
+                            <button type="button" class="btn-back">Back</button>
+                            <button type="submit" id="saveButton" class="btn-next">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="edit-profile-portfolio-scripts.js"></script>
+</body>
+</html>
